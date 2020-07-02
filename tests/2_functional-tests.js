@@ -164,6 +164,7 @@ suite('Functional Tests', function() {
           assert.property(res.body[0], 'open');
           assert.property(res.body[0], 'status_text');
           assert.property(res.body[0], '_id');
+          assert.equal(res.body[0].issue_title, "Title");
           done();
         });
 
@@ -185,6 +186,8 @@ suite('Functional Tests', function() {
           assert.property(res.body[0], 'open');
           assert.property(res.body[0], 'status_text');
           assert.property(res.body[0], '_id');
+          assert.equal(res.body[0].issue_title, "Title");
+          assert.equal(res.body[0].issue_text, "textRequired");
           done();
         });
       });
